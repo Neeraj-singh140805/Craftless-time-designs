@@ -1,38 +1,425 @@
-.App {
-  text-align: center;
+body {
+  margin: 0;
+  padding: 0;
+  background-size: 600% 600%;
+  animation: gradientShift 15s ease infinite;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header {
+  width: 100%;               /* take full width */
+  max-width: 1200px;          /* keep it centered */
+  margin: 0 auto;
+  height: 80px;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 16px 20px;
+  border-bottom: 1px solid #440A8F;
+}
+h1 {
+  font-weight: 800;
+  font-size: 36px;
+  font-family: syne, sans-serif;
+  line-height: 1.2;
+  letter-spacing: -1px;
+  color: #381664;
+  margin: 0;
+  white-space: nowrap;   /* prevent awkward wrapping */
+}
+.header2 {
+  display: flex;
+  gap: 24px;                  /* spacing between links */
+}
+.main {
+  font-family: syne, sans-serif;
+  font-weight: 500;
+  font-size: 20px;            /* smaller, consistent */
+  line-height: 32px;
+  color: #381664;
+  text-decoration: none;
+  padding: 4px 10px;
+  transition: all 0.3s ease;
+}
+.header3{
+    width: 1344px;
+    height: 1152px;
+    border-bottom: 1px;
+    padding-top: 96px;
+    padding-bottom: 96px;
+    gap: 48px;
+
+}
+h4 {
+  font-family: Syne, sans-serif;
+  font-weight: 700;
+  font-size: 80px;
+  line-height: 1.1;
+  letter-spacing: -2px;
+  text-align: center;
+  color: #381664;
+  text-shadow: 4px 8px 9px rgba(0,0,0,0.66);
+  margin: 0 auto;
+  max-width: 90%;        /* responsive, keeps text inside */
+  white-space: normal;   /* allow wrapping nicely if needed */
+}
+.h4heading{
+    text-shadow: 4px 8px 9px rgba(0,0,0,0.66);
+}
+.mainimg{
+    width: 1344px;
+    height: 672px;
+    border-radius: 22px;
+    border: 1px solid #440A8F;
+}
+.Project{
+    width: 1344px;
+    height: 1191x;
+    border-bottom: 1px;
+}
+.row1{
+    width: 1344px;
+    height: 429px;
+    padding-top: 48px;
+    padding-bottom: 48px;
+    gap: 48px;
+    display: flex;
+}
+.img1{
+    width: 416px;
+    height: 277px;
+    border-radius: 22px;
+    border: 1px solid #440A8F;
+    box-shadow: 18px 14px 31px 5px rgba(0,0,0,0.71);
+-webkit-box-shadow: 18px 14px 31px 5px rgba(0,0,0,0.71);
+-moz-box-shadow: 18px 14px 31px 5px rgba(0,0,0,0.71);
+}
+.paragraph{
+    width: 1344px;
+    height: 250px;
+    padding-top: 48px;
+    padding-bottom: 48px;
+    gap: 48px;
+    background-color: #ECF6FE;
+    display: flex;
+}
+.spacer{
+    width: 648px;
+    height: 154px;
+}
+.text{
+    width: 648px;
+    height: 154px;
+    font-family: Familijen Grotesk;
+    font-weight: 400px;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.5%;
+    color: #381664;
+}
+.landing-page{
+    width: 1344px;
+    height: 912px;
+    border-bottom: 1px;
+    padding-bottom: 48px;
+}
+.content{
+    width: 1344px;
+    height: 864px;
+    padding-top: 96px;
+    background-color: #ECF6FE;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+}
+.imgdiv{
+    height: 680px;
+    width: 1440px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background: linear-gradient(180deg, rgba(236,246,254,1) 28%, rgba(68,10,143,0.3015800070028011) 100%);
+}
+/* .img10{
+    width: 1440px;
+    height: 680px;
+    position: relative;
+} */
+.touch{
+    width: 1344px;
+    height: 120px;
+    font-family: Syne;
+    font-weight: 700;
+    font-size: 120px;
+    line-height: 120px;
+    letter-spacing: -2%;
+    text-align: center;
+}
+.Portfolio-About{
+    width: 1344px;
+    height: 452px;
+    border-bottom: 1px;
+    padding-top: 96px;
+    padding-bottom: 96px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.text1{
+    width: 900px;
+    height: 260px;
+    max-width: 900px;
+    font-family: Syne;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 52px;
+    letter-spacing: -1%;
+    text-align: center;
+    
+}
+.Portfolio-About1{
+    width: 1344px;
+    height: 132px;
+    border-bottom: 1px;
+    padding-top: 48px;
+    padding-bottom: 48px;
+    gap: 48px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+
+}
+.spacer{
+    width: 656px;
+    height: 36px;
+}
+.text2{
+    font-family: Syne;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 32px;
+    letter-spacing: -1%;
+    color: #381664;
+    
+}
+.text3{
+    width: 640px;
+    height: 28px;
+    font-family: Familjen Grotesk;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 28px;
+    color: #381664;
+}
+.footer{
+    width: 1344px;
+    height: 168px;
+    border-top: 1px;
+    padding-top: 96px;
+    padding-bottom: 24px;
+    gap: 24px;
+    
+}
+.container{
+    width: 1344px;
+    height: 48px;
+    justify-content: space-between;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+
+}
+.pagelinks{
+    width: 255px;
+    height: 32px;
+    gap: 32px;
+
+}
+.pagelinks1{
+    width: 255px;
+    height: 32px;
+    font-family: Syne;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 32px;
+    letter-spacing: -1%;
+    color: #381664;
+}
+.buttonLarge{
+    width: 171px;
+    height: 48px;
+    border-radius: 22px;
+    border: 1px solid #440A8F;
+    padding-top: 12px;
+    padding-right: 24px;
+    padding-bottom: 12px;
+    padding-left: 24px;
+}
+.buttonLarge1{
+    width: 123px;
+    height: 24px;
+    font-family: Space Mono;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #381664;
+}
+
+.main:hover {
+  background-color: rgb(147, 159, 186);
+  border-radius: 8px;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.mainimg{
+    box-shadow: 18px 14px 31px 5px rgba(0,0,0,0.71);
+    -webkit-box-shadow: 18px 14px 31px 5px rgba(0,0,0,0.71);
+    -moz-box-shadow: 18px 14px 31px 5px rgba(0,0,0,0.71);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.touch:hover{
+    animation: rotate 2.1s ease;
+    animation-timing-function: linear;
+
+}
+@keyframes rotate {
+    0%{
+        transform: scale(1);
+    }
+    25%{
+        transform: scale(1.5);
+    }
+    50%{
+        transform: scale(1);
+    }
+    75%{
+        transform: scale(1.5);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+
+@media (max-width:768px){
+    body{
+        width: 768px;
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+    .header{
+        width: 768px;
+        padding: 0 20px 0 20px;
+    }
+    h1{
+        width: 200px;
+        font-size: 32px;
+    }
+    .header2{
+        width: 400px;
+
+    }
+    .main{
+        width: 100px;
+        font-size: 20px;
+    }
+    .header3{
+        width: 768px;
+    }
+    h4{
+        width: 768px;
+        font-size: 68px;
+    }
+    .mainimg{
+        width: 722px;
+        height: 500px;
+
+    }
+    .Project{
+        width: 768px;
+    }
+    .row1{
+        width: 768px;
+    }
+    .row2{
+        width: 768px;
+    }
+    .row3{
+        width: 768px;
+    }
+    .img1{
+        width: 233px;
+        height: 150px;
+    }
+    .Project1{
+        width: 400px;
+    }
+    .img2{
+        width: 233px;
+        height: 150px;
+    }
+    .Project2{
+        width: 400px;
+    }
+    .img3{
+        width: 233px;
+        height: 150px;
+    }
+    .Project3{
+        width: 400px;
+    }
+    .img4{
+        width: 233px;
+        height: 150px;
+    }
+    .Project4{
+        width: 400px;
+    }
+    .img5{
+        width: 233px;
+        height: 150px;
+    }
+    .Project5{
+        width: 400px;
+    }
+    .img6{
+        width: 233px;
+        height: 150px;
+    }
+    .Project6{
+        width: 400px;
+    }
+    .img7{
+        width: 233px;
+        height: 150px;
+    }
+    .Project7{
+        width: 400px;
+    }
+    .img8{
+        width: 233px;
+        height: 150px;
+    }
+    .Project8{
+        width: 400px;
+    }
+    .img9{
+        width: 233px;
+        height: 150px;
+    }
+    .Project9{
+        width: 400px;
+    }
+    .paragraph{
+        width: 786px;
+
+    }
+    .img10{
+        width: 786px;
+    }
+    .touch{
+        width: 786px;
+
+
+    }
+    
 }
