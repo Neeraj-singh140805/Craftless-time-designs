@@ -9,13 +9,8 @@ function Login({ setIsLoggedIn }) {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    // Here you can call your backend API for authentication
     console.log("Logging in:", { email, password });
-
-    // Set login state to true
     setIsLoggedIn(true);
-
-    // Redirect to Home
     navigate("/home");
   };
 

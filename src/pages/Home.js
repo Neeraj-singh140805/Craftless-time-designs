@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import "./Home.css"; // keep your animations + styles here
+import "./Home.css";
 
 function Home() {
   const testimonials = [

@@ -11,7 +11,7 @@ function Signup() {
   const handleSignup = (e) => {
     e.preventDefault();
     console.log("Signing up:", { name, email, password });
-    navigate("/login"); // Redirect to login after signup
+    navigate("/login");
   };
 
   return (
