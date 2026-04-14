@@ -10,16 +10,6 @@ A modern, fully responsive **portfolio web application** built using **React.js*
 
 ---
 
-## 📸 Screenshots
-
-> Add your screenshots here (recommended)
-
-| Home Page | Projects Page |
-|----------|--------------|
-| ![Home](./screenshots/home.png) | ![Projects](./screenshots/projects.png) |
-
----
-
 ## ✨ Features
 
 - 🎯 Fully Responsive (Mobile + Tablet + Desktop)
