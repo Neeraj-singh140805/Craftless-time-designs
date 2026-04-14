@@ -63,7 +63,7 @@ function Home() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          <h1 className="color hero-heading">Crafting Timeless Designs</h1>
+          <h1 className="color">Crafting Timeless Designs</h1>
           <p>
             I create visually stunning, user-friendly designs that elevate your brand and engage your audience.
           </p>

@@ -16,6 +16,10 @@
   flex-wrap: wrap;
 }
 
+.color{
+  color: white;
+}
+
 .hero-text {
   flex: 1;
   min-width: 280px;
