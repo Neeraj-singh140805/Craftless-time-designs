@@ -1,124 +1,184 @@
+/* CONTAINER */
 .ProjectsContainer {
-  padding: 20px;
+  padding: 40px 5%;
   font-family: 'Familjen Grotesk', sans-serif;
 }
+
+/* ================= FILTER ================= */
 .categories {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  justify-content: center;
   margin-bottom: 30px;
 }
+
 .categories button {
   padding: 8px 16px;
   border: none;
   background-color: #e0e0e0;
-  border-radius: 12px;
+  border-radius: 20px;
   cursor: pointer;
   transition: 0.3s;
+  font-size: 14px;
 }
+
 .categories button.active,
 .categories button:hover {
   background-color: #381664;
   color: white;
 }
+
+.category {
+  font-size: 12px;
+  color: #999;
+  letter-spacing: 1px;
+}
+
+/* ================= GRID ================= */
 .ProjectsGrid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); 
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 24px;
 }
-@media (max-width: 768px) {
-  .ProjectsGrid {
-    grid-template-columns: 1fr; 
-  }
-}
+
+/* ================= CARD ================= */
 .ProjectCard {
   position: relative;
   cursor: pointer;
-  border-radius: 22px;
+  border-radius: 20px;
   overflow: hidden;
-  transition: transform 0.3s ease;
-}
-.ProjectCard:hover {
-  transform: scale(1.05) rotate(-2deg);
+  transition: 0.3s ease;
 }
 
+.ProjectCard:hover {
+  transform: translateY(-8px) scale(1.02);
+}
+
+/* IMAGE */
 .ProjectImg {
   width: 100%;
-  height: 250px;
+  height: 220px;
   object-fit: cover;
-  border-radius: 22px;
+  border-radius: 20px;
   border: 1px solid #440A8F;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
 }
+
+/* OVERLAY */
 .overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(56, 22, 100, 0.8);
+  inset: 0;
+  background: rgba(56, 22, 100, 0.85);
   color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 10px;
   text-align: center;
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: 0.3s ease;
   padding: 20px;
 }
+
 .ProjectCard:hover .overlay {
   opacity: 1;
 }
+
+/* BUTTON */
 .viewBtn {
   margin-top: 10px;
-  padding: 10px 18px;
-  background-color: #fff;
+  padding: 8px 16px;
+  background: white;
   color: #381664;
   text-decoration: none;
-  border-radius: 12px;
+  border-radius: 10px;
   font-weight: bold;
   transition: 0.3s;
 }
+
 .viewBtn:hover {
-  background-color: #381664;
-  color: #fff;
+  background: #381664;
+  color: white;
 }
+
+/* INFO */
 .ProjectInfo {
-  padding: 10px 0;
+  padding: 10px 5px;
   text-align: center;
 }
+
 .ProjectInfo h2 {
-  font-size: 20px;
+  font-size: 18px;
   color: #381664;
-  margin: 0;
+  margin: 5px 0;
 }
+
 .ProjectInfo h3 {
-  font-size: 17px;
-  color: #381664;
+  font-size: 14px;
+  color: #777;
   margin: 0;
 }
+
+/* ================= PROJECT PAGE ================= */
 .ProjectPage {
-  padding: 40px 20px;
+  padding: 40px 5%;
   text-align: center;
 }
+
 .ProjectPageImg {
   max-width: 500px;
   width: 100%;
-  border-radius: 22px;
+  border-radius: 20px;
   margin-bottom: 20px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
 }
+
 .backBtn {
   display: inline-block;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   text-decoration: none;
   color: #381664;
   font-weight: bold;
-  font-size: 16px;
-  transition: 0.3s;
 }
+
 .backBtn:hover {
   color: #2575fc;
 }
 
+/* ================= RESPONSIVE ================= */
+
+/* TABLET */
+@media (max-width: 768px) {
+  .ProjectsContainer {
+    padding: 30px 5%;
+  }
+
+  .ProjectImg {
+    height: 200px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 480px) {
+  .categories {
+    justify-content: flex-start;
+  }
+
+  .categories button {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+
+  .ProjectImg {
+    height: 180px;
+  }
+
+  .ProjectInfo h2 {
+    font-size: 16px;
+  }
+
+  .ProjectInfo h3 {
+    font-size: 12px;
+  }
+}

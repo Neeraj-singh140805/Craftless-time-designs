@@ -50,7 +50,7 @@ function Projects() {
             </div>
             <div className="ProjectInfo">
               <h2>{project.title}</h2>
-              <h3>{project.category}</h3>
+              <h3 className="category">{project.category}</h3>
             </div>
           </div>
         ))}

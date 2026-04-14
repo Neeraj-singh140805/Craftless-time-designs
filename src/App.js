@@ -9,18 +9,16 @@ import "./App.css";
 import ProjectPage from "./pages/ProjectPage";
 
 function App() {
-  // Track login state
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   return (
     <Router>
       <div className="App">
-        {/* Header / Navigation */}
-        <div className="header">
-          <div>
-            <h1>THE DESIGNS</h1>
-          </div>
-          <div className="header2">
+        {/* Header */}
+        <header className="header">
+          <h1 className="logo">THE DESIGNS</h1>
+
+          <nav className="nav">
             {isLoggedIn ? (
               <>
                 <Link className="main" to="/home">Home</Link>
@@ -39,39 +37,26 @@ function App() {
                 <Link className="main" to="/signup">Sign Up</Link>
               </>
             )}
-          </div>
-        </div>
+          </nav>
+        </header>
 
         {/* Routes */}
         <Routes>
-          <Route
-            path="/"
-            element={
-              <Login setIsLoggedIn={setIsLoggedIn} />
-            }
-          />
-          <Route
-            path="/login"
-            element={
-              <Login setIsLoggedIn={setIsLoggedIn} />
-            }
-          />
+          <Route path="/" element={<Login setIsLoggedIn={setIsLoggedIn} />} />
+          <Route path="/login" element={<Login setIsLoggedIn={setIsLoggedIn} />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/home" element={<Home />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/projects" element={<Projects />} />
-        <Route path="/projects/:id" element={<ProjectPage />} />
+          <Route path="/projects/:id" element={<ProjectPage />} />
         </Routes>
 
         {/* Footer */}
-        <div className="footer">
+        <footer className="footer">
           <div className="container">
-            <div className="pagelinks">
-              <h1 className="pagelinks1">© 2023 Portfolio</h1>
-            </div>
+            <h1 className="pagelinks1">© 2023 Portfolio</h1>
           </div>
-        </div>
+        </footer>
       </div>
     </Router>
   );
